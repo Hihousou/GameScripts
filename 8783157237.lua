@@ -11,7 +11,7 @@ local function damage(c)
 		return
 	end
     local args = {
-		[1] = , tool
+		[1] = tool,
 		[2] = {
 			["p"] = eRoot.Position,
 			["pid"] = 1,
