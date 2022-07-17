@@ -5,5 +5,5 @@ local Games = {
 
 local GameName = Games[game.PlaceId]
 if GameName then
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/Hihousou/Hexploit/main/" .. GameName .. ".lua"))()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Hihousou/GameScripts/main/" .. GameName .. ".lua"))()
 end
