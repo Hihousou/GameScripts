@@ -14,7 +14,7 @@ local function damage(e)
 		[2] = {
 			["p"] = eRoot.Position,
 			["pid"] = 1,
-			["part"] = eRoot.RootPart,
+			["part"] = eRoot,
 			["d"] = (lRoot.Position - eRoot.Position).Magnitude,
 			["maxDist"] = (lRoot.Position - eRoot.Position).Magnitude+1,
 			["h"] = e.Humanoid,
