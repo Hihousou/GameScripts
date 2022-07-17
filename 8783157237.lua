@@ -10,20 +10,19 @@ local function damage(e)
 		return
 	end
 	local args = {
-		[1] = tool,
-		[2] = {
-			["p"] = eRoot.Position,
-			["pid"] = 1,
-			["part"] = eRoot,
-			["d"] = (lRoot.Position - eRoot.Position).Magnitude,
-			["maxDist"] = (lRoot.Position - eRoot.Position).Magnitude+1,
-			["h"] = e.Humanoid,
-			["m"] = eRoot.Material.Plastic,
-			["sid"] = 1,
-			["t"] = 0.013683955117603506,
-			["n"] = (lRoot.Position - eRoot.Position).Unit,
-		}
-	}
+	[1] = tool,
+    [2] = {
+        ["p"] = eRoot.Position,
+        ["pid"] = 1,
+        ["part"] = eRoot,
+        ["d"] = (lRoot.Position - eRoot.Position).Magnitude,
+		["maxDist"] = (lRoot.Position - eRoot.Position).Magnitude+1,
+		["h"] = e.Humanoid,
+		["m"] = Enum.Material.Plastic,
+		["sid"] = 1,
+		["t"] = 0.01,
+		["n"] = (lRoot.Position - eRoot.Position).Unit,
+	}}
 
 	game:GetService("ReplicatedStorage").WeaponsSystem.Network.WeaponHit:FireServer(unpack(args))
 end
@@ -39,10 +38,8 @@ local function damageall()
 end
 local function collectall()
 	local localRoot = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart
-	for _,v in pairs(workspace.Coin:Chidlren())do
-		if v.Name == "TouchInterest" and v.Parent then
-			firetouchinterest(localRoot,v,0)
-		end
+	for _,v in pairs(workspace.Coin:GetChildren())do
+		firetouchinterest(localRoot,v,0)
 	end
 end
 
