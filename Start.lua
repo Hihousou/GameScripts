@@ -1,14 +1,11 @@
--- True = Hidden
--- False = Shown
-
 local Games = {
 	[142823291] = {
 		Name = "mm2",
-		Hidden = true}
-	,
+		Hidden = true,
+	},
 	[8783157237] = {
 		Name = "8783157237", -- game name is "有感筆電⚔️槍戰", which is problematic
-		Hidden = false
+		Hidden = false,
 	},
 }
 
