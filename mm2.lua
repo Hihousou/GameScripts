@@ -1,5 +1,5 @@
-local Library = _G.Library or loadstring(game:HttpGet("https://raw.githubusercontent.com/Hihousou/Hexploit/main/uilib.lua"))()_G.Library=Library
-local Esp = _G.Esp or loadstring(game:HttpGet("https://raw.githubusercontent.com/Hihousou/Hexploit/main/esp.lua"))()_G.Esp=Esp
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Hihousou/Hexploit/main/uilib.lua"))()
+local Esp = loadstring(game:HttpGet("https://raw.githubusercontent.com/Hihousou/Hexploit/main/esp.lua"))()
 
 function HasItem(Player,Name)
     if Player.Backpack:FindFirstChild(Name) or Player.Character and Player.Character:FindFirstChild(Name)then
