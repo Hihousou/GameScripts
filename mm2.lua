@@ -8,14 +8,6 @@ function HasItem(Player,Name)
 end
 function GetRoles()
 	if not Esp.Active then return end
-	local OldSettings = Esp.Settings
-	local NewSettings = {}
-	for i,v in pairs(OldSettings)do
-		if i ~= "ShowTeam" then
-			NewSettings[i] = false
-		end
-	end
-	
     local M,S = nil,nil
     for _,v in pairs(game:GetService("Players"):GetPlayers())do
         if not M and HasItem(v,"Knife")then
@@ -26,7 +18,13 @@ function GetRoles()
         end
     end
     
-    local NewSettings = {}
+	local OldSettings = Esp.Settings
+	local NewSettings = {}
+	for i,v in pairs(OldSettings)do
+		if i ~= "ShowTeam" then
+			NewSettings[i] = false
+		end
+	end
     if M then NewSettings[M.Name] = Color3.fromRGB(255,0,0)end
     if S then NewSettings[S.Name] = Color3.fromRGB(0,0,255)end
 	if Esp.Active then Esp:Update(NewSettings)end
