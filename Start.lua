@@ -14,5 +14,7 @@ if GameData then
 	task.spawn(function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/Hihousou/GameScripts/main/" .. GameData.Name .. ".lua"))()
 	end)
+	return GameData.Hidden
 end
-return GameData.Hidden or false
+
+return nil
