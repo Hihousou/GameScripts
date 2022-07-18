@@ -10,7 +10,7 @@ function GetRoles()
 	if not Esp.Active then return end
 	local OldSettings = Esp.Settings
 	local NewSettings = {}
-	for i,v in pairs(Settings)do
+	for i,v in pairs(OldSettings)do
 		if i ~= "ShowTeam" then
 			NewSettings[i] = false
 		end
