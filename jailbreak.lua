@@ -1,11 +1,15 @@
-local Folder = game:GetService("Workspace"):WaitForChild("Casino"):WaitForChild("RobberyDoor"):WaitForChild("Codes"):WaitForChild("Code")
+local Folder = game:GetService("Workspace"):WaitForChild("Casino"):WaitForChild("RobberyDoor"):WaitForChild("Codes")
 function AddHighlight(Part)
-    local Highlight = Instance.new("Highlight",game:GetService("CoreGui"))
-    wait()
-    Highlight.Adornee = v
-    Highlight.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
-end    
-for _,v in pairs(Folder:GetChildren())do
+    if Part:IsA("BasePart")then
+        local Highlight = Instance.new("Highlight",game:GetService("CoreGui"))
+        Highlight.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+        Highlight.Adornee = Part
+        Highlight.FillTransparency = 1
+        Part.Color = Color3.new(1,1,1)
+        Part.Transparency = 0
+    end
+end
+for _,v in pairs(Folder:GetDescendants())do
     AddHighlight(v)
 end
-Folder.ChildAdded:Connect(AddHighlight)
+Folder.DescendantAdded:Connect(AddHighlight)
