@@ -13,3 +13,29 @@ for _,v in pairs(Folder:GetDescendants())do
     AddHighlight(v)
 end
 Folder.DescendantAdded:Connect(AddHighlight)
+
+local Players = game:GetService("Players")
+function SetC(C)
+    C:GetPropertyChangedSignal("Parent"):Connect(function()
+        if C.Parent == nil then
+           C.Parent = workspace
+        end
+    end)
+end
+function Set(P)
+    if P.Character and P.Character.Parent == nil then
+        P.Character.Parent = workspace
+    end
+    
+    P:GetPropertyChangedSignal("Character"):Connect(function(Char)
+        if Char and Char.Parent == nil then
+           Char.Parent = workspace 
+        end
+    end)
+end
+for _,v in pairs(Players:GetPlayers())do
+   Set(v) 
+end
+Players.PlayerAdded:Connect(function(P)
+    Set(P)
+end)
