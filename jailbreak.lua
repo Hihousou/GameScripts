@@ -26,7 +26,7 @@ function Set(P)
     if P.Character and P.Character.Parent == nil then
         P.Character.Parent = workspace
     end
-    
+    P.CharacterAdded:Connect(SetC)
     P:GetPropertyChangedSignal("Character"):Connect(function(Char)
         if Char and Char.Parent == nil then
            Char.Parent = workspace 
