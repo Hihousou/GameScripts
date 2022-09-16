@@ -12,7 +12,7 @@ local Games = {
 		Hidden = false,
 	},
 	[6607474310] = {
-		Name = "guestquestreforged", -- game name is "有感筆電⚔️槍戰", which is problematic
+		Name = "guestquestreforged",
 		Hidden = true,
 	},
 }
