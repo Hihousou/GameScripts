@@ -13,7 +13,7 @@ function get()
 end
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Hihousou/Hexploit/main/uilib.lua"))()
-local Window = Library:Window("Guest Quest Reforged)
+local Window = Library:Window("Guest Quest Reforged")
 Window:Toggle("Auto Attack (Bow)",false,function(Bool)
 	_G.Active = Bool
 end)
