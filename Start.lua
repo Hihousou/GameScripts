@@ -11,6 +11,10 @@ local Games = {
 		Name = "8783157237", -- game name is "有感筆電⚔️槍戰", which is problematic
 		Hidden = false,
 	},
+	[6607474310] = {
+		Name = "guestquestreforged", -- game name is "有感筆電⚔️槍戰", which is problematic
+		Hidden = true,
+	},
 }
 
 local GameData = Games[game.PlaceId]
