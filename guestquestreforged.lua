@@ -27,13 +27,14 @@ function SetupTool(Tool)
 		end
 	end)
 	
-	Tool.RemoteEvent:FireServer(lPlayer.Character,lPlayer.Character.Humanoid,lPlayer.Character.Torso)
+	
 end
 function HitAll()
 	if lPlayer.Character then
 		local Tool = lPlayer.Character:FindFirstChildOfClass("Tool")
 		if Tool then
 			SetupTool(Tool)
+			Tool.RemoteEvent:FireServer(lPlayer.Character,lPlayer.Character.Humanoid,lPlayer.Character.Torso)
 		end
 	end
 end
@@ -42,7 +43,7 @@ HitAll()
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Hihousou/Hexploit/main/uilib.lua"))()
 local Window = Library:Window("GQ: Reforged")
-Window:Toggle("Auto Attack (Bow)",false,function(Bool)
+Window:Toggle("Spam Shoot (Bow)",false,function(Bool)
 	AutoAttack = Bool
 end)
 Window:Button("Hit All (Sword)",false,HitAll)
