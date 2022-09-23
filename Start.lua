@@ -15,6 +15,10 @@ local Games = {
 		Name = "guestquestreforged",
 		Hidden = true,
 	},
+	[164051105] = {
+		Name = "superbombsurvival",
+		Hidden = true,
+	},
 }
 
 local GameData = Games[game.PlaceId]
