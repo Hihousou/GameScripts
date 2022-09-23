@@ -1,13 +1,13 @@
 local Players = game:GetService("Players")
 local Folder = workspace:FindFirstChild("Bombs")
 local ItemGroups = {
-    ["Buffs"] = {"CandyCorn"},
+    ["CandyCorn"] = {"CandyCorn"},
     ["Traps"] = {"Duck","NitroBombBig","FakeCoin","FootBomb"},
     ["Meteors"] = {"ShockMeteor","IceMeteor","Comet","PoisonMeteor","SmallMeteor"},
     ["HomingMissiles"] = {"Wingseeker","HomingRocketBig","HomingRocketFast","ChaserRocketShock","ChaserRocketBig","HomingRocket","ChaserRocketIce"},
     ["Airstrikes"] = {"AirStrikeBig","ClusterMissileBig"},
     ["Nukes"] = {"Nuke","VeryBigNuke","PoisonNuke"},
-    ["Some Currency"] = {"HalloweenCandy"}
+    ["HalloweenCandy"] = {"HalloweenCandy"}
     ["EventIcon"] = {"EventIcon"},
     --["Ignore"] = {"SuperSoda","ChargeSoda","Gem","PizzaBox","Pizza","Coin_event","Coin_red","Coin_gold2","Coin_gold","Coin_silver","Coin_copper"}
 }
