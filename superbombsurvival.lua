@@ -7,7 +7,7 @@ local ItemGroups = {
     ["HomingMissiles"] = {"Wingseeker","HomingRocketBig","HomingRocketFast","ChaserRocketShock","ChaserRocketBig","HomingRocket","ChaserRocketIce"},
     ["Airstrikes"] = {"AirStrikeBig","ClusterMissileBig"},
     ["Nukes"] = {"Nuke","VeryBigNuke","PoisonNuke"},
-    ["HalloweenCandy"] = {"HalloweenCandy"}
+    ["HalloweenCandy"] = {"HalloweenCandy"},
     ["EventIcon"] = {"EventIcon"},
     --["Ignore"] = {"SuperSoda","ChargeSoda","Gem","PizzaBox","Pizza","Coin_event","Coin_red","Coin_gold2","Coin_gold","Coin_silver","Coin_copper"}
 }
