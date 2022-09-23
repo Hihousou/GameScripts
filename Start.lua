@@ -16,7 +16,11 @@ local Games = {
 		Hidden = true,
 	},
 	[164051105] = {
-		Name = "superbombsurvival",
+		Name = "superbombsurvival", -- Normal Servers
+		Hidden = true,
+	},
+	[249163956] = {
+		Name = "superbombsurvival", -- Super Intense Servers
 		Hidden = true,
 	},
 }
